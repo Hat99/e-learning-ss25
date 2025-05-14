@@ -11,7 +11,10 @@ public class Explodable : MonoBehaviour
     private Vector3 explosionTarget;
 
     [Tooltip("How long the explosion takes")]
-    public float explosionDuration = 1.0f;
+    public float explosionDuration;
+
+    [Tooltip("Wether to use own explosion duration or parent's")]
+    public bool useParentDuration;
 
     //how far the explosion has progressed
     private float explosionProgress;
@@ -27,6 +30,12 @@ public class Explodable : MonoBehaviour
     {
         explosionStart = transform.localPosition;
         explosionTarget = transform.localPosition + explosionDirection;
+
+        if (useParentDuration)
+        {
+            //search for explodable scripts in parent objects (not in this object)
+            explosionDuration = transform.parent.gameObject.GetComponentInParent<Explodable>().explosionDuration;
+        }
     }
 
     // Update is called once per frame

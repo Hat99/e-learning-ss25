@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 30, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &44824404
 GameObject:
@@ -619,6 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 30, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &212114235
 GameObject:
@@ -933,6 +935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 0, z: 30}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!4 &237852452 stripped
 Transform:
@@ -1196,6 +1199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 30, y: 0, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1001 &331264285
 PrefabInstance:
@@ -1392,6 +1396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 30, y: 60, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &398599112 stripped
 GameObject:
@@ -1413,6 +1418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 30, y: 0, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &425410336
 GameObject:
@@ -1959,6 +1965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: -15, y: 30, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1001 &591453628
 PrefabInstance:
@@ -2175,6 +2182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 0, z: 15}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &637151521 stripped
 GameObject:
@@ -3516,6 +3524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 60, y: 0, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &875343105
 GameObject:
@@ -3827,6 +3836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 0, z: -15}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &947247389
 GameObject:
@@ -4276,6 +4286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 15, y: 60, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &1039280434 stripped
 GameObject:
@@ -4297,6 +4308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 0, z: -30}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &1059051467
 GameObject:
@@ -6040,6 +6052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 0, z: 30}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &1402119436
 GameObject:
@@ -6748,6 +6761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: -15, y: 75, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &1756045394
 GameObject:
@@ -7727,6 +7741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 0, z: -30}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!1 &1997290512 stripped
 GameObject:
@@ -7748,6 +7763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 0, y: 60, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
   exploded: 0
 --- !u!114 &2001374502 stripped
 MonoBehaviour:
@@ -7781,6 +7797,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionDirection: {x: 60, y: 0, z: 0}
   explosionDuration: 1
+  useParentDuration: 1
+  exploded: 0
+--- !u!1 &2017482855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cdf73044bb777184ca1e396926e6ecf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2111520765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2017482857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017482855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00eb7bdac366c446b86e26b7b1e104c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionDirection: {x: 0, y: 0, z: 0}
+  explosionDuration: 0.5
+  useParentDuration: 0
   exploded: 0
 --- !u!1 &2021867756
 GameObject:
@@ -8485,6 +8524,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cdf73044bb777184ca1e396926e6ecf9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2017482857}
     - targetCorrespondingSourceObject: {fileID: -2746571530452679025, guid: cdf73044bb777184ca1e396926e6ecf9,
         type: 3}
       insertIndex: -1
