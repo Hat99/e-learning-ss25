@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,7 +24,12 @@ public class Explodable : MonoBehaviour
     [Tooltip("Is the target object currently exploded?")]
     public bool exploded;
 
-    
+    [Tooltip("Which, if any, parts have to be exploded prior to exploding this")]
+    public List<Explodable> explodeAfter = new List<Explodable>();
+
+    //automatically filled, which, if any, parts rely on this being exploded
+    //TODO: make this non-public?
+    public List<Explodable> explodeBefore = new List<Explodable>();
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,6 +42,12 @@ public class Explodable : MonoBehaviour
         {
             //search for explodable scripts in parent objects (not in this object)
             explosionDuration = transform.parent.gameObject.GetComponentInParent<Explodable>().explosionDuration;
+        }
+
+        //register this object as dependent on any in explodeAfter
+        foreach(Explodable explodable in explodeAfter)
+        {
+            explodable.explodeBefore.Add(this);
         }
     }
 
@@ -69,8 +82,35 @@ public class Explodable : MonoBehaviour
 
     public void Explode()
     {
-        exploded = !exploded;
-        UpdateExplosion();
+        if(CanExplode())
+        {
+            exploded = !exploded;
+            UpdateExplosion();
+        }
+    }
+
+    private bool CanExplode()
+    {
+        //is there an explodeAfter object that's not yet exploded?
+        foreach(Explodable explodable in explodeAfter)
+        {
+            if (!explodable.exploded)
+            {
+                return false;
+            }
+        }
+
+        //(when imploding)
+        //is there an explodeBefore object that's still exploded?
+        foreach(Explodable explodable in explodeBefore)
+        {
+            if (explodable.exploded)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private void UpdateExplosion()
