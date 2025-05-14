@@ -24,6 +24,9 @@ public class Explodable : MonoBehaviour
     [Tooltip("Is the target object currently exploded?")]
     public bool exploded;
 
+    //is the object currently supposed to be exploding / exploded?
+    private bool exploding;
+
     [Tooltip("Which, if any, parts have to be exploded prior to exploding this")]
     public List<Explodable> explodeAfter = new List<Explodable>();
 
@@ -49,6 +52,8 @@ public class Explodable : MonoBehaviour
         {
             explodable.explodeBefore.Add(this);
         }
+
+        //TODO ?: add circular dependency check for explodeBefore / explodeAfter
     }
 
     // Update is called once per frame
@@ -59,21 +64,23 @@ public class Explodable : MonoBehaviour
             Explode();
         }
 
-        if(exploded && explosionProgress < explosionDuration)
+        if(exploding && explosionProgress < explosionDuration)
         {
             explosionProgress += Time.deltaTime;
             if(explosionProgress > explosionDuration)
             {
                 explosionProgress = explosionDuration;
+                exploded = true;
             }
             UpdateExplosion();
         }
-        else if (!exploded && explosionProgress > 0)
+        else if (!exploding && explosionProgress > 0)
         {
             explosionProgress -= Time.deltaTime;
             if(explosionProgress < 0)
             {
                 explosionProgress = 0;
+                exploded = false;
             }
             UpdateExplosion();
         }
@@ -84,10 +91,11 @@ public class Explodable : MonoBehaviour
     {
         if(CanExplode())
         {
-            exploded = !exploded;
+            exploding = !exploding;
             UpdateExplosion();
         }
     }
+
 
     private bool CanExplode()
     {
