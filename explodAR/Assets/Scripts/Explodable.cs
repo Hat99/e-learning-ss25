@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Explodable : MonoBehaviour
 {
@@ -11,12 +12,6 @@ public class Explodable : MonoBehaviour
     //where to start and end the explosion (calculated in start function)
     private Vector3 explosionStart;
     private Vector3 explosionTarget;
-
-    [Tooltip("How long the explosion takes")]
-    public float explosionDuration;
-
-    [Tooltip("Wether to use own explosion duration or parent's")]
-    public bool useParentDuration;
 
     //how far the explosion has progressed
     private float explosionProgress;
@@ -34,26 +29,38 @@ public class Explodable : MonoBehaviour
     //TODO: make this non-public?
     public List<Explodable> explodeBefore = new List<Explodable>();
 
-
+    private GameObject _button;
+    private LineRenderer _lineRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         explosionStart = transform.localPosition;
         explosionTarget = transform.localPosition + explosionDirection;
 
-        if (useParentDuration)
-        {
-            //search for explodable scripts in parent objects (not in this object)
-            explosionDuration = transform.parent.gameObject.GetComponentInParent<Explodable>().explosionDuration;
-        }
-
         //register this object as dependent on any in explodeAfter
-        foreach(Explodable explodable in explodeAfter)
+        foreach (Explodable explodable in explodeAfter)
         {
             explodable.explodeBefore.Add(this);
         }
 
         //TODO ?: add circular dependency check for explodeBefore / explodeAfter
+
+        _button = Instantiate(ExplodARController.instance.explodeButtonTemplate);
+        _button.transform.SetParent(this.transform);
+        _button.transform.position = transform.position 
+            + explosionDirection.normalized * ExplodARController.instance.buttonDistanceFromObject;
+        
+        _lineRenderer = _button.AddComponent<LineRenderer>();
+        _lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        _lineRenderer.startColor = Color.white;
+        _lineRenderer.endColor = Color.white;
+        _lineRenderer.startWidth = .1f;
+        _lineRenderer.endWidth = .1f;
+        _lineRenderer.positionCount = 2;
+        _lineRenderer.SetPosition(0, transform.position);
+        _lineRenderer.SetPosition(1, _button.transform.position); 
+
+        SetButtonActive(true);
     }
 
     // Update is called once per frame
@@ -64,12 +71,12 @@ public class Explodable : MonoBehaviour
             Explode();
         }
 
-        if(exploding && explosionProgress < explosionDuration)
+        if(exploding && explosionProgress < ExplodARController.instance.explosionDuration)
         {
             explosionProgress += Time.deltaTime;
-            if(explosionProgress > explosionDuration)
+            if(explosionProgress > ExplodARController.instance.explosionDuration)
             {
-                explosionProgress = explosionDuration;
+                explosionProgress = ExplodARController.instance.explosionDuration;
                 exploded = true;
             }
             UpdateExplosion();
@@ -86,6 +93,7 @@ public class Explodable : MonoBehaviour
         }
 
     }
+
 
     public void Explode()
     {
@@ -124,6 +132,13 @@ public class Explodable : MonoBehaviour
     private void UpdateExplosion()
     {
         transform.localPosition = Vector3.Lerp
-            (explosionStart, explosionTarget, explosionProgress / explosionDuration);
+            (explosionStart, explosionTarget, explosionProgress / ExplodARController.instance.explosionDuration);
+        _lineRenderer.SetPosition(0, this.transform.position);
+        _lineRenderer.SetPosition(1, _button.transform.position);
+    }
+
+    public void SetButtonActive(bool active)
+    {
+        _button.SetActive(active);
     }
 }
