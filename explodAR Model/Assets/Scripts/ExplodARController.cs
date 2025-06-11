@@ -24,18 +24,25 @@ public class ExplodARController : MonoBehaviour
 
     private void Update()
     {
-        //explode all
+        //listen for hotkeys
         if (Keyboard.current[Key.E].wasPressedThisFrame)
         {
-            explodeAllEvent.Invoke(true);
+            ExplodeAll();
         }
-
-        //implode all
         if (Keyboard.current[Key.R].wasPressedThisFrame)
         {
-            explodeAllEvent.Invoke(false);
+            ImplodeAll();
         }
     }
 
+    public void ExplodeAll()
+    {
+        explodeAllEvent.Invoke(true);
+    }
+
+    public void ImplodeAll()
+    {
+        explodeAllEvent.Invoke(false);
+    }
 
 }
