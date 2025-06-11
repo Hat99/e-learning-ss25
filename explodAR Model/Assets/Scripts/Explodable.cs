@@ -28,13 +28,15 @@ public class Explodable : MonoBehaviour, IPointerClickHandler
 
     //automatically filled, which, if any, parts rely on this being exploded
     //TODO: make this non-public?
-    public List<Explodable> explodeBefore = new List<Explodable>();
+    List<Explodable> explodeBefore = new List<Explodable>();
 
     private GameObject _button;
     private LineRenderer _lineRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        ExplodARController.instance.explodeAllEvent.AddListener(ExplosionOverride);
+
         explosionStart = transform.localPosition;
         explosionTarget = transform.localPosition + explosionDirection;
 
@@ -52,10 +54,7 @@ public class Explodable : MonoBehaviour, IPointerClickHandler
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current[Key.E].wasPressedThisFrame)
-        {
-            Explode();
-        }
+        
 
         if(exploding && explosionProgress < ExplodARController.instance.explosionDuration)
         {
@@ -90,6 +89,12 @@ public class Explodable : MonoBehaviour, IPointerClickHandler
         }
     }
 
+
+    public void ExplosionOverride(bool value)
+    {
+        exploding = value;
+        UpdateExplosion();
+    }
 
     private bool CanExplode()
     {

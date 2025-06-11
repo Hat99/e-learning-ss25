@@ -1,15 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class ExplodARController : MonoBehaviour
 {
-    [Tooltip("A template to use as a button for exploding objects")]
-    public GameObject explodeButtonTemplate;
-    [Tooltip("A template to use as a button for opening an object's info box")]
-    public GameObject infoButtonTemplate;
-
-    [Tooltip("How far the button should be placed from its object")]
-    public float buttonDistanceFromObject;
+    public UnityEvent<bool> explodeAllEvent = new UnityEvent<bool>();
 
     [Tooltip("How many seconds explosions take")]
     public float explosionDuration;
@@ -20,6 +16,26 @@ public class ExplodARController : MonoBehaviour
     public static ExplodARController instance;
     private void Awake()
     {
+        if (explodeAllEvent == null)
+            explodeAllEvent = new UnityEvent<bool>();
+
         instance = this;   
     }
+
+    private void Update()
+    {
+        //explode all
+        if (Keyboard.current[Key.E].wasPressedThisFrame)
+        {
+            explodeAllEvent.Invoke(true);
+        }
+
+        //implode all
+        if (Keyboard.current[Key.R].wasPressedThisFrame)
+        {
+            explodeAllEvent.Invoke(false);
+        }
+    }
+
+
 }
