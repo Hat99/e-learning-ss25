@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ExplodARController : MonoBehaviour
@@ -12,6 +13,8 @@ public class ExplodARController : MonoBehaviour
 
     [Tooltip("How many seconds explosions take")]
     public float explosionDuration;
+
+    
 
     public static ExplodARController instance;
     private void Awake()
