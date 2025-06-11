@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Info : MonoBehaviour
 {
@@ -39,7 +40,6 @@ public class Info : MonoBehaviour
     public List<InfoObject> informationObjects = new List<InfoObject>();
 
     private GameObject _infoBox;
-    private TextMeshProUGUI _titleText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -75,13 +75,21 @@ public class Info : MonoBehaviour
                     break;
             }
         }
-
-        _infoBox.SetActive(true);
     }
 
     // Update is called once per frame
+    private bool infoShown = false;
     void Update()
     {
-        
+        if (Keyboard.current[Key.I].wasPressedThisFrame)
+        {
+            infoShown = !infoShown;
+            ShowInfo(infoShown);
+        }
+    }
+
+    public void ShowInfo(bool value)
+    {
+        _infoBox.SetActive(value);
     }
 }
