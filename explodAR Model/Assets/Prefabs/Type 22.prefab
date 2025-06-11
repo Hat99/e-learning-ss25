@@ -195,13 +195,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: About wheels
   informationObjects:
-  - header: 1)
+  - type: 0
+    header: 1)
     collapsible: 1
-    mediaSource: 
     text: The wheels on the Type 22 go round and round
-  - header: 2)
+  - type: 0
+    header: 2)
     collapsible: 1
-    mediaSource: 
     text: Round and round
 --- !u!1 &1408585507643317134 stripped
 GameObject:

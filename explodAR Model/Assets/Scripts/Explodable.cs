@@ -1,10 +1,11 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class Explodable : MonoBehaviour
+public class Explodable : MonoBehaviour, IPointerClickHandler
 {
     [Tooltip("How far and in what direction to move the object when exploding")]
     public Vector3 explosionDirection;
@@ -45,22 +46,7 @@ public class Explodable : MonoBehaviour
 
         //TODO ?: add circular dependency check for explodeBefore / explodeAfter
 
-        _button = Instantiate(ExplodARController.instance.explodeButtonTemplate);
-        _button.transform.SetParent(this.transform);
-        _button.transform.position = transform.position 
-            + explosionDirection.normalized * ExplodARController.instance.buttonDistanceFromObject;
-        
-        _lineRenderer = _button.AddComponent<LineRenderer>();
-        _lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        _lineRenderer.startColor = Color.white;
-        _lineRenderer.endColor = Color.white;
-        _lineRenderer.startWidth = .1f;
-        _lineRenderer.endWidth = .1f;
-        _lineRenderer.positionCount = 2;
-        _lineRenderer.SetPosition(0, transform.position);
-        _lineRenderer.SetPosition(1, _button.transform.position); 
-
-        SetButtonActive(true);
+        gameObject.AddComponent<MeshCollider>();
     }
 
     // Update is called once per frame
@@ -133,12 +119,10 @@ public class Explodable : MonoBehaviour
     {
         transform.localPosition = Vector3.Lerp
             (explosionStart, explosionTarget, explosionProgress / ExplodARController.instance.explosionDuration);
-        _lineRenderer.SetPosition(0, this.transform.position);
-        _lineRenderer.SetPosition(1, _button.transform.position);
     }
 
-    public void SetButtonActive(bool active)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        _button.SetActive(active);
+        Explode();
     }
 }

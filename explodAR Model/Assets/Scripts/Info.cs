@@ -44,13 +44,31 @@ public class Info : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _infoBox = Instantiate(InfoTemplate.instance.infoTemplate);
+        _infoBox = Instantiate(ExplodARController.instance.infoTemplate);
+        _infoBox.transform.SetParent(transform, true);
+        _infoBox.transform.position = transform.position;
         InfoTemplate info = _infoBox.GetComponent<InfoTemplate>();
 
-        //_titleText = Instantiate(ExplodARController.instance.infoTemplateTitle);
-        _titleText.text = title;
+        info.infoTemplateTitle.text = title;
+        foreach (InfoObject obj in informationObjects)
+        {
+            switch (obj.type)
+            {
+                case InfoObject.Type.paragraph:
+                    TextMeshProUGUI tmp = Instantiate(info.infoTemplateTextContent);
+                    tmp.text = obj.text;
+                    tmp.transform.SetParent(info.infoContainer.transform, false);
+                    tmp.gameObject.SetActive(true);
+                    break;
+                case InfoObject.Type.media:
+                    break;
+                default:
+                    Debug.Log("Unimplemented type");
+                    break;
+            }
+        }
 
-        _infoBox.SetActive(true);
+        //_infoBox.SetActive(true);
     }
 
     // Update is called once per frame

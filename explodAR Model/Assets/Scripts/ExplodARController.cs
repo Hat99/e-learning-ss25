@@ -14,7 +14,8 @@ public class ExplodARController : MonoBehaviour
     [Tooltip("How many seconds explosions take")]
     public float explosionDuration;
 
-    
+    [Tooltip("The information box template object")]
+    public GameObject infoTemplate;
 
     public static ExplodARController instance;
     private void Awake()
