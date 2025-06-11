@@ -10,6 +10,9 @@ public class InfoTemplate : MonoBehaviour
     [Tooltip("The container for the info boxes")]
     public GameObject infoContainer;
 
+    [Tooltip("The header for info boxes")]
+    public TextMeshProUGUI infoTemplateHeader;
+
     [Tooltip("The info content text object")]
     public TextMeshProUGUI infoTemplateTextContent;
 

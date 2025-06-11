@@ -55,7 +55,15 @@ public class Info : MonoBehaviour
             switch (obj.type)
             {
                 case InfoObject.Type.paragraph:
-                    TextMeshProUGUI tmp = Instantiate(info.infoTemplateTextContent);
+                    TextMeshProUGUI tmp;
+                    if(obj.header != "")
+                    {
+                        tmp = Instantiate(info.infoTemplateHeader);
+                        tmp.text = obj.header;
+                        tmp.transform.SetParent(info.infoContainer.transform, false);
+                        tmp.gameObject.SetActive(true);
+                    }
+                    tmp = Instantiate(info.infoTemplateTextContent);
                     tmp.text = obj.text;
                     tmp.transform.SetParent(info.infoContainer.transform, false);
                     tmp.gameObject.SetActive(true);
@@ -68,7 +76,7 @@ public class Info : MonoBehaviour
             }
         }
 
-        //_infoBox.SetActive(true);
+        _infoBox.SetActive(true);
     }
 
     // Update is called once per frame
