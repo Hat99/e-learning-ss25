@@ -8,22 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: body primary
-    second: {fileID: 2100000, guid: b1822a0f41380bb49ba412d1921769b5, type: 2}
+    second: {fileID: 2100000, guid: 095ea5cf431df864dab94568ef1608f9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: body secondary
-    second: {fileID: 2100000, guid: ce630b827bd16fa42a0090b156757ae5, type: 2}
+    second: {fileID: 2100000, guid: 74ec894942df6dd42b5c88251e83db20, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: glass
-    second: {fileID: 2100000, guid: 016fcf6b96c06a64695236c461612e91, type: 2}
+    second: {fileID: 2100000, guid: 2d2825563bf0bf5429645da5e1f92737, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: metal gold
-    second: {fileID: 2100000, guid: 187d00baaa67c4f46a7e9b8a23e26e8a, type: 2}
+    second: {fileID: 2100000, guid: 506a4d75905824f4a8a3e68a48699d32, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -50,7 +50,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
