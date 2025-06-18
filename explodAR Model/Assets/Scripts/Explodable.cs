@@ -128,6 +128,18 @@ public class Explodable : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Explode();
+        if ((Keyboard.current[Key.LeftCtrl].isPressed))
+        {
+            Info info = gameObject.GetComponent<Info>();
+            if (info != null)
+            {
+                info.ToggleInfo();
+            }
+        }
+        else
+        {
+            Explode();
+        }
+        
     }
 }
