@@ -112,7 +112,17 @@ public class Info : MonoBehaviour
     public void ToggleInfo()
     {   
         _infoShown = !_infoShown;
+        if (_infoShown)
+        {
+            SetInfoBoxRotationToView();
+        }
         _infoBox.SetActive(_infoShown);
+    }
+
+    //aligns the info box to face the camera
+    private void SetInfoBoxRotationToView()
+    {
+        _infoBox.transform.rotation = Camera.main.transform.rotation;
     }
 
     #endregion methods

@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
-public class Explodable : MonoBehaviour, IPointerClickHandler
+public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     #region fields
 
@@ -29,6 +30,9 @@ public class Explodable : MonoBehaviour, IPointerClickHandler
     //automatically filled, which, if any, parts rely on this being exploded
     List<Explodable> explodeBefore = new List<Explodable>();
 
+    //an outline to show explodable objects while hovering over them
+    private Outline _outline;
+
     #endregion fields
 
 
@@ -40,6 +44,14 @@ public class Explodable : MonoBehaviour, IPointerClickHandler
     {
         //add listener to global explosion event
         ExplodARController.instance.explodeAllEvent.AddListener(ExplosionOverride);
+
+        _outline = gameObject.AddComponent<Outline>();
+        _outline.OutlineMode = Outline.Mode.OutlineAll;
+
+        _outline.OutlineWidth = ExplodARController.instance.outlineWidth;
+        _outline.OutlineColor = ExplodARController.instance.outlineColor;
+
+        _outline.enabled = false;
 
         //set explosion start and target for lerping
         _explosionStart = transform.localPosition;
@@ -142,11 +154,17 @@ public class Explodable : MonoBehaviour, IPointerClickHandler
             (_explosionStart, _explosionTarget, _explosionProgress / ExplodARController.instance.explosionDuration);
     }
 
+    public void SetOutlineEnabled(bool value)
+    {
+        //enable the outline only if the object can explode
+        _outline.enabled = value && CanExplode();
+    }
+
     #endregion methods
 
 
 
-    #region OnPointerClick
+    #region pointer handlers
 
     //make object clickable to trigger explosions and info pop ups
     public void OnPointerClick(PointerEventData eventData)
@@ -166,5 +184,46 @@ public class Explodable : MonoBehaviour, IPointerClickHandler
         
     }
 
-    #endregion OnPointerClick
+    public void OnPointerEnter(PointerEventData eventData)
+    {   
+        if (eventData.pointerEnter == gameObject)
+        {
+            if(ExplodARController.instance.pointerToken != null)
+            {
+                ExplodARController.instance.pointerQueue.Add(ExplodARController.instance.pointerToken);
+                ExplodARController.instance.pointerToken.SetOutlineEnabled(false);
+            }
+            ExplodARController.instance.pointerToken = this;
+            
+            SetOutlineEnabled(true);
+        }
+        else
+        {
+            ExplodARController.instance.pointerQueue.Add(this);
+        }
+    }
+
+    
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        SetOutlineEnabled(false);
+        ExplodARController.instance.pointerQueue.Remove(this);
+        if(ExplodARController.instance.pointerToken == this)
+        {
+            if(ExplodARController.instance.pointerQueue.Count > 0)
+            {
+                Explodable exp = ExplodARController.instance.pointerQueue[0];
+                ExplodARController.instance.pointerQueue.Remove(exp);
+                exp.SetOutlineEnabled(true);
+                ExplodARController.instance.pointerToken = exp;
+            }
+            else
+            {
+                ExplodARController.instance.pointerToken = null;
+            }
+        }
+    }
+
+    #endregion pointer handlers
 }

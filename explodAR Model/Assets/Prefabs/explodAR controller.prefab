@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89eb84db5238a5e43aeb0f22e478542a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explodeButtonTemplate: {fileID: 4691477208696167718, guid: fc028f330b3fc6042af4dd70dad844f6,
-    type: 3}
-  infoButtonTemplate: {fileID: 4691477208696167718, guid: 5e3ab41d28461904db12e473d638fa74,
-    type: 3}
-  buttonDistanceFromObject: 2
+  explodeAllEvent:
+    m_PersistentCalls:
+      m_Calls: []
   explosionDuration: 0.5
+  infoTemplate: {fileID: 0}
+  outlineWidth: 5
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}

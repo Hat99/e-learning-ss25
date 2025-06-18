@@ -200,7 +200,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2436543803233363160, guid: 2eaec24594d62ef4b9c098e383606b43,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1846142701}
   m_SourcePrefab: {fileID: 100100000, guid: 2eaec24594d62ef4b9c098e383606b43, type: 3}
 --- !u!1 &1028568255
 GameObject:
@@ -217,7 +221,7 @@ GameObject:
   - component: {fileID: 1028568260}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -790,6 +794,30 @@ MonoBehaviour:
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
+--- !u!1 &1846142698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2436543803233363160, guid: 2eaec24594d62ef4b9c098e383606b43,
+    type: 3}
+  m_PrefabInstance: {fileID: 44066173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1846142701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846142698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1922883166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5566298358607692078, guid: 6d2172afcd72db744b66dc1adebf4ef9,

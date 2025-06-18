@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class ExplodARController : MonoBehaviour
@@ -8,6 +10,8 @@ public class ExplodARController : MonoBehaviour
 
     //event for triggering all explosions
     public UnityEvent<bool> explodeAllEvent = new UnityEvent<bool>();
+    public Explodable pointerToken = null;
+    public List<Explodable> pointerQueue = new List<Explodable>();
 
     [Tooltip("How many seconds explosions take")]
     public float explosionDuration;
@@ -18,6 +22,9 @@ public class ExplodARController : MonoBehaviour
     //make the class available as pseudo-static
     public static ExplodARController instance;
 
+    //parameters for outlines
+    public float outlineWidth;
+    public Color outlineColor;
     #endregion fields
 
 
