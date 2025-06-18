@@ -1,14 +1,13 @@
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
-using static Unity.Burst.Intrinsics.X86.Avx;
 
 public class Info : MonoBehaviour
 {
+    #region infoObject
+
+    //data definition for a block of information to be displayed in the info box
     [Serializable]
     public class InfoObject
     {
@@ -24,12 +23,19 @@ public class Info : MonoBehaviour
         [Tooltip("The header of the section")]
         public string header;
 
+        //unimplemented!
         [Tooltip("Wether or not the section is collapsible")]
         public bool collapsible;
 
         [Tooltip("The information text or media source")]
         public string text;
     }
+
+    #endregion infoObject
+
+
+
+    #region fields
 
     [Tooltip("The title of the info box")]
     public string title;
@@ -38,21 +44,37 @@ public class Info : MonoBehaviour
     [SerializeField]
     public List<InfoObject> informationObjects = new List<InfoObject>();
 
+    //the info box object
     private GameObject _infoBox;
+
+    //wether or not the info box is currently active
+    private bool _infoShown = false;
+
+    #endregion fields
+
+
+
+    #region unity methods
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //instantiate the info box
         _infoBox = Instantiate(ExplodARController.instance.infoTemplate);
         _infoBox.transform.SetParent(transform, true);
         _infoBox.transform.position = transform.position;
+
+        //TODO: make this dynamic
         _infoBox.transform.Translate(new Vector3(0, .75f, 0));
         InfoTemplate info = _infoBox.GetComponent<InfoTemplate>();
 
         info.infoTemplateTitle.text = title;
+
+        //fill the info box's scroll view
         TextMeshProUGUI tmp;
         foreach (InfoObject obj in informationObjects)
         {
+            //set the header if it's used
             if (obj.header != "")
             {
                 tmp = Instantiate(info.infoTemplateHeader);
@@ -60,6 +82,8 @@ public class Info : MonoBehaviour
                 tmp.transform.SetParent(info.infoContainer.transform, false);
                 tmp.gameObject.SetActive(true);
             }
+
+            //create the info based on type
             switch (obj.type)
             {
                 case InfoObject.Type.paragraph:
@@ -69,6 +93,7 @@ public class Info : MonoBehaviour
                     tmp.gameObject.SetActive(true);
                     break;
                 case InfoObject.Type.media:
+                    //unimplemented!
                     break;
                 default:
                     Debug.Log("Unimplemented type");
@@ -77,21 +102,18 @@ public class Info : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    private bool _infoShown = false;
-    void Update()
-    {
-        //if (Keyboard.current[Key.I].wasPressedThisFrame)
-        //{
-        //    infoShown = !infoShown;
-        //    ShowInfo(infoShown);
-        //}
-    }
+    #endregion unity methods
 
+
+
+    #region methods
+
+    //toggles the info box active or inactive
     public void ToggleInfo()
     {   
         _infoShown = !_infoShown;
         _infoBox.SetActive(_infoShown);
     }
 
+    #endregion methods
 }

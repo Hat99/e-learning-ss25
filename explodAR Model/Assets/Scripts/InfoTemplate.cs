@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class InfoTemplate : MonoBehaviour
 {
+    #region fields
 
     [Tooltip("The title text object")]
     public TextMeshProUGUI infoTemplateTitle;
@@ -16,9 +17,19 @@ public class InfoTemplate : MonoBehaviour
     [Tooltip("The info content text object")]
     public TextMeshProUGUI infoTemplateTextContent;
 
+    //make the class available as pseudo-static
     public static InfoTemplate instance;
+
+    #endregion fields
+
+
+
+    #region unity methods
+
     private void Awake()
     {
         instance = this;
     }
+
+    #endregion unity methods
 }

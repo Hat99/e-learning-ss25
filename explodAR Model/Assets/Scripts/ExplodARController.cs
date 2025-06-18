@@ -1,10 +1,12 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class ExplodARController : MonoBehaviour
 {
+    #region fields
+
+    //event for triggering all explosions
     public UnityEvent<bool> explodeAllEvent = new UnityEvent<bool>();
 
     [Tooltip("How many seconds explosions take")]
@@ -13,7 +15,15 @@ public class ExplodARController : MonoBehaviour
     [Tooltip("The information box template object")]
     public GameObject infoTemplate;
 
+    //make the class available as pseudo-static
     public static ExplodARController instance;
+
+    #endregion fields
+
+
+
+    #region unity methods
+
     private void Awake()
     {
         if (explodeAllEvent == null)
@@ -35,6 +45,12 @@ public class ExplodARController : MonoBehaviour
         }
     }
 
+    #endregion unity methods
+
+
+
+    #region event invocations
+
     public void ExplodeAll()
     {
         explodeAllEvent.Invoke(true);
@@ -45,4 +61,5 @@ public class ExplodARController : MonoBehaviour
         explodeAllEvent.Invoke(false);
     }
 
+    #endregion event incovations
 }
