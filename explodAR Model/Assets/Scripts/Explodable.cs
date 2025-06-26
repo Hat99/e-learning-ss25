@@ -4,8 +4,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class Explodable : MonoBehaviour, IPointerClickHandler//, IPointerEnterHandler, IPointerExitHandler
 {
     #region fields
 
@@ -31,10 +33,7 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     //automatically filled, which, if any, parts rely on this being exploded
     List<Explodable> explodeBefore = new List<Explodable>();
 
-    //an outline to show explodable objects while hovering over them
-    private Outline _outline;
-
-    private Info _info;
+    
 
     #endregion fields
 
@@ -45,18 +44,19 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _info = gameObject.GetComponent<Info>();
+        //ensure that the object has an explodARObjectHelper
+        ExplodARObjectHelper helper = gameObject.GetComponent<ExplodARObjectHelper>();
+        if (helper == null)
+        {
+            helper = gameObject.AddComponent<ExplodARObjectHelper>();
+        }
+        //register this script with the helper
+        helper.explodable = this;
 
         //add listener to global explosion event
         ExplodARController.instance.explodeAllEvent.AddListener(ExplosionOverride);
 
-        _outline = gameObject.AddComponent<Outline>();
-        _outline.OutlineMode = Outline.Mode.OutlineAll;
-
-        _outline.OutlineWidth = ExplodARController.instance.outlineWidth;
-        _outline.OutlineColor = ExplodARController.instance.outlineColor;
-
-        _outline.enabled = false;
+        
 
         //set explosion start and target for lerping
         _explosionStart = transform.localPosition;
@@ -70,8 +70,7 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
         //TODO ?: add circular dependency check for explodeBefore / explodeAfter
 
-        //add a mesh collider to make object interactible
-        gameObject.AddComponent<MeshCollider>();
+        
     }
 
     // Update is called once per frame
@@ -102,17 +101,7 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
             UpdateExplosion();
         }
 
-        if (_outline.enabled)
-        {
-            if (XRInputHelper.instance.explodeActionPressedThisFrame)
-            {
-                Explode();
-            }
-            if(_info != null && XRInputHelper.instance.infoActionPressedThisFrame)
-            {
-                _info.ToggleInfo();
-            }
-        }
+        
     }
 
     #endregion unity methods
@@ -122,7 +111,7 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     #region methods
 
     //explodes the object *if* it can explode right now
-    public void Explode()
+    public void ToggleExplosion()
     {
         //if the object can explode (or implode), do it
         if(CanExplode())
@@ -140,7 +129,7 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     }
 
     //wether or not the object can currently explode
-    private bool CanExplode()
+    public bool CanExplode()
     {
         //is there an explodeAfter object that's not yet exploded?
         foreach(Explodable explodable in explodeAfter)
@@ -170,12 +159,8 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
         transform.localPosition = Vector3.Lerp
             (_explosionStart, _explosionTarget, _explosionProgress / ExplodARController.instance.explosionDuration);
     }
-
-    public void SetOutlineEnabled(bool value)
-    {
-        //enable the outline only if the object can explode
-        _outline.enabled = value && CanExplode();
-    }
+    
+    
 
     #endregion methods
 
@@ -196,51 +181,51 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
         }
         else
         {
-            Explode();
+            ToggleExplosion();
         }
         
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {   
-        if (eventData.pointerEnter == gameObject)
-        {
-            if(ExplodARController.instance.pointerToken != null)
-            {
-                ExplodARController.instance.pointerQueue.Add(ExplodARController.instance.pointerToken);
-                ExplodARController.instance.pointerToken.SetOutlineEnabled(false);
-            }
-            ExplodARController.instance.pointerToken = this;
+    //public void OnPointerEnter(PointerEventData eventData)
+    //{   
+    //    if (eventData.pointerEnter == gameObject)
+    //    {
+    //        if(ExplodARController.instance.pointerToken != null)
+    //        {
+    //            ExplodARController.instance.pointerQueue.Add(ExplodARController.instance.pointerToken);
+    //            ExplodARController.instance.pointerToken.SetOutlineEnabled(false);
+    //        }
+    //        ExplodARController.instance.pointerToken = this;
             
-            SetOutlineEnabled(true);
-        }
-        else
-        {
-            ExplodARController.instance.pointerQueue.Add(this);
-        }
-    }
+    //        SetOutlineEnabled(true);
+    //    }
+    //    else
+    //    {
+    //        ExplodARController.instance.pointerQueue.Add(this);
+    //    }
+    //}
 
     
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        SetOutlineEnabled(false);
-        ExplodARController.instance.pointerQueue.Remove(this);
-        if(ExplodARController.instance.pointerToken == this)
-        {
-            if(ExplodARController.instance.pointerQueue.Count > 0)
-            {
-                Explodable exp = ExplodARController.instance.pointerQueue[0];
-                ExplodARController.instance.pointerQueue.Remove(exp);
-                exp.SetOutlineEnabled(true);
-                ExplodARController.instance.pointerToken = exp;
-            }
-            else
-            {
-                ExplodARController.instance.pointerToken = null;
-            }
-        }
-    }
+    //public void OnPointerExit(PointerEventData eventData)
+    //{
+    //    SetOutlineEnabled(false);
+    //    ExplodARController.instance.pointerQueue.Remove(this);
+    //    if(ExplodARController.instance.pointerToken == this)
+    //    {
+    //        if(ExplodARController.instance.pointerQueue.Count > 0)
+    //        {
+    //            Explodable exp = ExplodARController.instance.pointerQueue[0];
+    //            ExplodARController.instance.pointerQueue.Remove(exp);
+    //            exp.SetOutlineEnabled(true);
+    //            ExplodARController.instance.pointerToken = exp;
+    //        }
+    //        else
+    //        {
+    //            ExplodARController.instance.pointerToken = null;
+    //        }
+    //    }
+    //}
 
     #endregion pointer handlers
 }
