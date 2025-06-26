@@ -44,6 +44,8 @@ public class Info : MonoBehaviour
     [SerializeField]
     public List<InfoObject> informationObjects = new List<InfoObject>();
 
+    public Vector3 infoOffset = new Vector3(0, 0.75f, 0);
+
     //the info box object
     private GameObject _infoBox;
 
@@ -74,7 +76,7 @@ public class Info : MonoBehaviour
         _infoBox.transform.position = transform.position;
 
         //TODO: make this dynamic
-        _infoBox.transform.Translate(new Vector3(0, .75f, 0));
+        _infoBox.transform.Translate(infoOffset);
         InfoTemplate info = _infoBox.GetComponent<InfoTemplate>();
 
         info.infoTemplateTitle.text = title;
