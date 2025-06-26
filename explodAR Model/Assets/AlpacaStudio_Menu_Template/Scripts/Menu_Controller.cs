@@ -38,7 +38,7 @@ public class Menu_Controller : MonoBehaviour {
 	public void PlayGame () {
 
 		Debug.Log("Button Pressed");
-		UnityEngine.SceneManagement.SceneManager.LoadScene("CarScene");
+		UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneToLoadOnPlay);
 	}
 	
 	public void Mute () {
