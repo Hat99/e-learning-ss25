@@ -60,6 +60,6 @@ public class ExplodARObjectHelper : MonoBehaviour
 
     public void OnHoverEntered(HoverEnterEventArgs args)
     {
-        Debug.Log($"{args.interactorObject} hovered over {args.interactableObject}", this);
+        Debug.Log($"{args.manager} hovered over {args.interactableObject}", this);
     }
 }
