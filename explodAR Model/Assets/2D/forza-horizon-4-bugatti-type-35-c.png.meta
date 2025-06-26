@@ -1,0 +1,2550 @@
+fileFormatVersion: 2
+guid: 3fc23fb4c0c82574785afb2a5e0f4fdd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2051480058179852082
+    second: forza-horizon-4-bugatti-type-35-c_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3934
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec8646c91cda783e0800000000000000
+      internalID: -2051480058179852082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_1
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3934
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a598fe43ef663a40b86d400e8cd997e
+      internalID: 1741976832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_2
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 3934
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc975515456852244886670220257b53
+      internalID: 253395710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_3
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 3934
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec4de2ae70979c428c735dd641a1176
+      internalID: -833879711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_4
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3934
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450c543c55a29db4eb78e10d107e32de
+      internalID: 494298630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_5
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3934
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d2ff9cf02775a45be8517095aa945f
+      internalID: -111143461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_6
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3934
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd85e8af897d0fa4fa911bc000e555b6
+      internalID: 850961504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3653
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4f96dce41c6bb4a884bcdb972cf391
+      internalID: -14763826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_8
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3653
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b530e1fbc3c7949a4d61d7312e074a
+      internalID: 645025490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_9
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 3653
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b68f9f09793814b9c7b4b772659f38
+      internalID: 130246577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_10
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 3653
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750db3ddb63315546adc26bf6c65d35f
+      internalID: 807356968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_11
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3653
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0494e3e2956b99b469d7c7e140b97a88
+      internalID: -257386829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_12
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3653
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d571761a44b5c1545a8c7d9db6dff946
+      internalID: -1848809433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_13
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3653
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac1acd3177617642bea5540dcb9f7f3
+      internalID: -1498772762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3372
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944cf0ff906a8884fb61952363a758f7
+      internalID: 1534051745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_15
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3372
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62045f438a2d26e468f31097e2e0f2a0
+      internalID: 747558214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_16
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 3372
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50cd031aaa64a1d4484cf6f5f6c3093f
+      internalID: 1516532608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_17
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 3372
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d613c16be793a304ca732b6fc4ea1c87
+      internalID: 885401143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_18
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3372
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1072e653dfcf0794583eaffc677f724f
+      internalID: 1868119879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_19
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3372
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcae661892d9f294b85e38852fac6fcc
+      internalID: -1329665305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_20
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3372
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736f878c99ae3ec4d8193f7618b08751
+      internalID: -1026051846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3091
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76612f01c829b3d4abe86695fe49824a
+      internalID: 879568722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_22
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3091
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f6b8deb8366df4494a9ed6233e346e
+      internalID: -487108913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_23
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 3091
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3400ca36fbe70bf42b53a2543510c9da
+      internalID: -829665263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_24
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 3091
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff4263827dfe6f439f0c8cb0f9460fb
+      internalID: -1958060312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_25
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3091
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cc854dcf00f154b96f56af87296235
+      internalID: 2139912184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_26
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3091
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b66fdbd2f2e1ee449e988b1767ef9c8
+      internalID: 1465387737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_27
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3091
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3232287240386464ebe98ab9892f021e
+      internalID: -1142475875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2810
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d8518b35a8b584ea2c5ad1db7f1884
+      internalID: 278519217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_29
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2810
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabd1555040bcff488ea88095439e077
+      internalID: 2063513670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_30
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2810
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe8fba45a5afc947b75600acba20cdd
+      internalID: 2097854636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_31
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2810
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e407553871989439b0fce84a166b23
+      internalID: -674793896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_32
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2810
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8873793249d0a5c4091ce40e7dbc1fd0
+      internalID: -737330693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_33
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2810
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4277da56a99b69c40aa1ac0bb656eb51
+      internalID: -531092683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_34
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2810
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb5f02406ff94a498d56eba25746c66
+      internalID: -324981799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2529
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412d48043258dd247b785bceaacf5e33
+      internalID: 1150235638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_36
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2529
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5df2d63b7722fb44b242e224c37ef5a
+      internalID: -1929123356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_37
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2529
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa714d9c71edea9498ef76523ee5e393
+      internalID: -1536077590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_38
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2529
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a30f580f181c44498ca6541c031e629
+      internalID: 303293941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_39
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2529
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374d4b8b3bf4951468bdf0bf3f1529d0
+      internalID: -1192934119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_40
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2529
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75eebca65f7e22a47bca39b91e999a23
+      internalID: -323124964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_41
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2529
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c2ac80233d4454fb0fb76e215823f3
+      internalID: -568651696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2248
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b241590db5283644b9394550ced35a9
+      internalID: 1212679037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_43
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2248
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79c7279be4c18341ad4ee129ae6133c
+      internalID: 1649209469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_44
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2248
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f99b7947eccf4d4aa2615c41ca91e53
+      internalID: -903688820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_45
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2248
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcedab7b425f2940affdc1dcf9d976b
+      internalID: 2001712923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_46
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2248
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d5c9a9d18352c4489e1f5e5801f0fc
+      internalID: 26110714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_47
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2248
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5827c8536e777e14e8d41f7049332036
+      internalID: 1501449957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_48
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2248
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a538b5f3e129b42b56af5ad06f8184
+      internalID: 725882744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1967
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690ff4aeeb628194eb5610a7ac7379e9
+      internalID: 302878540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_50
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1967
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cec804fb7dc8a644834da50952f9773
+      internalID: 1046003917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_51
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1967
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e5450ed5e55944b9cd65d4fb527324
+      internalID: 1398423093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_52
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1967
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4bb0013be82c440bb4a6b8899e2ad5
+      internalID: 1741920304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_53
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1967
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c22d82ddf1759041a12d0a244a6f7d1
+      internalID: 355866740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_54
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1967
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cdc10069bb6444bb58e3cf3df58bf4
+      internalID: -686926182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_55
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1967
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fd42b751c0bff4788b8331639ad83c
+      internalID: -1433400195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1686
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f03877dfe7ddd74c8481058805cf958
+      internalID: -989196077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_57
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1686
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c74c55ffb442840895c0f5c63ecda6
+      internalID: 1196988255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_58
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1686
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990a054901f5c93458b1c391977cf365
+      internalID: -706148547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_59
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1686
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7540efaa56148164384ff420d5ec68ce
+      internalID: 600995308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_60
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1686
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0b3c5c84332134888dd435ba3baa38
+      internalID: 607078287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_61
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1686
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c25df980c839f744a4842a0ff539e18
+      internalID: 2089315413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_62
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1686
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b5ae61701ce0f41998ef4edbcdcb28
+      internalID: 2009378854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1405
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0264c547ab586394c95b6da36cb5a08f
+      internalID: -1103824464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_64
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1405
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38b3eaf257ba64448e43841f095b690
+      internalID: -2052188198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_65
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1405
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a012caa09dfd294ca41dcb3fcdcd758
+      internalID: -154550786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_66
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1405
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba7936b0d852ae4b944006a6debc62f
+      internalID: 1521341312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_67
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1405
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae0794575f59644faae6efeb5538da2
+      internalID: -1270150060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_68
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1405
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3981df8a1769349b4d62e64fe1c295
+      internalID: 1115166851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_69
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1405
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df022cb02a81c840ba43630a69420ad
+      internalID: -1343959200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ff86fb3d340ba41b060c5880771646
+      internalID: -1577523695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_71
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1124
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61edc49c3ba86564387ff44729a7b49b
+      internalID: 1552223440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_72
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1124
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c92bdd24548e949820ca154e5df2e3
+      internalID: 1080758538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_73
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1124
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803802a52defb5a4197706ef6a52dccd
+      internalID: -401939551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_74
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1124
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb21b15532e3fc4b85e87072ebf5c24
+      internalID: -812566157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_75
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1124
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527b6f4c1f1174743a116842285746af
+      internalID: -1406693291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_76
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1124
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e3de7112705b442960647173775dcf
+      internalID: -1575046647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 843
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d5f1ccdb3d2d7488bf43e06b8a3a95
+      internalID: -722240293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_78
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 843
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6f0f33028f51143815cfda78281955
+      internalID: 1688760383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_79
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 843
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4461bf5236bcc4dabad070acaba33c
+      internalID: 1319533777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_80
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 843
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa29a08e6e9d2e9408c4216bc192c6c0
+      internalID: 648367185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_81
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 843
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2cebf24e043a543b77604edf72be4f
+      internalID: -201807777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_82
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 843
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ed9c0a33856174d8fb3f24c1b234b0
+      internalID: 1447238967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_83
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 843
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385787cfb65d2c943860298ff33ecdc9
+      internalID: 314248300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1955471a4441d8b43b1293704bda871b
+      internalID: -2099999286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_85
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 562
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d57fc94b914f85479a13f890df8a160
+      internalID: -1766280819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_86
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 562
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607cab5944e8a9041b9ab221676470a2
+      internalID: -98746015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_87
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 562
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dde2087c18d06e4d90996b647255113
+      internalID: 1356909072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_88
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 562
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7775780d4d07a40b34d2d64033562c
+      internalID: 182272896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_89
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 562
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc4ff9abf1954b45a8f0c187bca3d97
+      internalID: -95646800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_90
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 562
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374b349b68314aa4e8efc8d685c756cf
+      internalID: 241245871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_91
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 281
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a07e62c3fb84964da1a4a02558f974a
+      internalID: 1243169937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_92
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 281
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c52f3c54926f4489c7e8f3e777b847
+      internalID: -214607878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_93
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 281
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924b5b6056ba31f43a2eaa834f3caea5
+      internalID: -1879406077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_94
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 281
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db43deb2ebe4df4408b990d6f4e37a25
+      internalID: -167709968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_95
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 281
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d2957fd1acef042978267fb9c3d0cc
+      internalID: 1869555315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_96
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 281
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 978b39e70a3a1454b866f6412b6cfb2d
+      internalID: -136345232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_97
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 281
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a382d7755d733b4d8c86ad4fbeb5e6e
+      internalID: 90281499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8c84fbb86cea14fab94b399dea9810
+      internalID: 810712822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_99
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c468f551cae30a54ab4959b37f8a792e
+      internalID: -219131531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_100
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 0
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60777972a0287014495be6825700976f
+      internalID: -1103108843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_101
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 0
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89140f4148d5ade4f81f0802c3b74765
+      internalID: 846787867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_102
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 0
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0379d964e093a3b49ac2a0f4f8956792
+      internalID: 1227194764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_103
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 0
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd656551c1c97140ba4692114e2b3a2
+      internalID: -1992544075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forza-horizon-4-bugatti-type-35-c_104
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 0
+        width: 498
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d2ad1417900d44f8ba25117d88ecab
+      internalID: -879994772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b975306722069434691b4b106be3884a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":498.0,"y":281.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      forza-horizon-4-bugatti-type-35-c_0: -2051480058179852082
+      forza-horizon-4-bugatti-type-35-c_1: 1741976832
+      forza-horizon-4-bugatti-type-35-c_10: 807356968
+      forza-horizon-4-bugatti-type-35-c_100: -1103108843
+      forza-horizon-4-bugatti-type-35-c_101: 846787867
+      forza-horizon-4-bugatti-type-35-c_102: 1227194764
+      forza-horizon-4-bugatti-type-35-c_103: -1992544075
+      forza-horizon-4-bugatti-type-35-c_104: -879994772
+      forza-horizon-4-bugatti-type-35-c_11: -257386829
+      forza-horizon-4-bugatti-type-35-c_12: -1848809433
+      forza-horizon-4-bugatti-type-35-c_13: -1498772762
+      forza-horizon-4-bugatti-type-35-c_14: 1534051745
+      forza-horizon-4-bugatti-type-35-c_15: 747558214
+      forza-horizon-4-bugatti-type-35-c_16: 1516532608
+      forza-horizon-4-bugatti-type-35-c_17: 885401143
+      forza-horizon-4-bugatti-type-35-c_18: 1868119879
+      forza-horizon-4-bugatti-type-35-c_19: -1329665305
+      forza-horizon-4-bugatti-type-35-c_2: 253395710
+      forza-horizon-4-bugatti-type-35-c_20: -1026051846
+      forza-horizon-4-bugatti-type-35-c_21: 879568722
+      forza-horizon-4-bugatti-type-35-c_22: -487108913
+      forza-horizon-4-bugatti-type-35-c_23: -829665263
+      forza-horizon-4-bugatti-type-35-c_24: -1958060312
+      forza-horizon-4-bugatti-type-35-c_25: 2139912184
+      forza-horizon-4-bugatti-type-35-c_26: 1465387737
+      forza-horizon-4-bugatti-type-35-c_27: -1142475875
+      forza-horizon-4-bugatti-type-35-c_28: 278519217
+      forza-horizon-4-bugatti-type-35-c_29: 2063513670
+      forza-horizon-4-bugatti-type-35-c_3: -833879711
+      forza-horizon-4-bugatti-type-35-c_30: 2097854636
+      forza-horizon-4-bugatti-type-35-c_31: -674793896
+      forza-horizon-4-bugatti-type-35-c_32: -737330693
+      forza-horizon-4-bugatti-type-35-c_33: -531092683
+      forza-horizon-4-bugatti-type-35-c_34: -324981799
+      forza-horizon-4-bugatti-type-35-c_35: 1150235638
+      forza-horizon-4-bugatti-type-35-c_36: -1929123356
+      forza-horizon-4-bugatti-type-35-c_37: -1536077590
+      forza-horizon-4-bugatti-type-35-c_38: 303293941
+      forza-horizon-4-bugatti-type-35-c_39: -1192934119
+      forza-horizon-4-bugatti-type-35-c_4: 494298630
+      forza-horizon-4-bugatti-type-35-c_40: -323124964
+      forza-horizon-4-bugatti-type-35-c_41: -568651696
+      forza-horizon-4-bugatti-type-35-c_42: 1212679037
+      forza-horizon-4-bugatti-type-35-c_43: 1649209469
+      forza-horizon-4-bugatti-type-35-c_44: -903688820
+      forza-horizon-4-bugatti-type-35-c_45: 2001712923
+      forza-horizon-4-bugatti-type-35-c_46: 26110714
+      forza-horizon-4-bugatti-type-35-c_47: 1501449957
+      forza-horizon-4-bugatti-type-35-c_48: 725882744
+      forza-horizon-4-bugatti-type-35-c_49: 302878540
+      forza-horizon-4-bugatti-type-35-c_5: -111143461
+      forza-horizon-4-bugatti-type-35-c_50: 1046003917
+      forza-horizon-4-bugatti-type-35-c_51: 1398423093
+      forza-horizon-4-bugatti-type-35-c_52: 1741920304
+      forza-horizon-4-bugatti-type-35-c_53: 355866740
+      forza-horizon-4-bugatti-type-35-c_54: -686926182
+      forza-horizon-4-bugatti-type-35-c_55: -1433400195
+      forza-horizon-4-bugatti-type-35-c_56: -989196077
+      forza-horizon-4-bugatti-type-35-c_57: 1196988255
+      forza-horizon-4-bugatti-type-35-c_58: -706148547
+      forza-horizon-4-bugatti-type-35-c_59: 600995308
+      forza-horizon-4-bugatti-type-35-c_6: 850961504
+      forza-horizon-4-bugatti-type-35-c_60: 607078287
+      forza-horizon-4-bugatti-type-35-c_61: 2089315413
+      forza-horizon-4-bugatti-type-35-c_62: 2009378854
+      forza-horizon-4-bugatti-type-35-c_63: -1103824464
+      forza-horizon-4-bugatti-type-35-c_64: -2052188198
+      forza-horizon-4-bugatti-type-35-c_65: -154550786
+      forza-horizon-4-bugatti-type-35-c_66: 1521341312
+      forza-horizon-4-bugatti-type-35-c_67: -1270150060
+      forza-horizon-4-bugatti-type-35-c_68: 1115166851
+      forza-horizon-4-bugatti-type-35-c_69: -1343959200
+      forza-horizon-4-bugatti-type-35-c_7: -14763826
+      forza-horizon-4-bugatti-type-35-c_70: -1577523695
+      forza-horizon-4-bugatti-type-35-c_71: 1552223440
+      forza-horizon-4-bugatti-type-35-c_72: 1080758538
+      forza-horizon-4-bugatti-type-35-c_73: -401939551
+      forza-horizon-4-bugatti-type-35-c_74: -812566157
+      forza-horizon-4-bugatti-type-35-c_75: -1406693291
+      forza-horizon-4-bugatti-type-35-c_76: -1575046647
+      forza-horizon-4-bugatti-type-35-c_77: -722240293
+      forza-horizon-4-bugatti-type-35-c_78: 1688760383
+      forza-horizon-4-bugatti-type-35-c_79: 1319533777
+      forza-horizon-4-bugatti-type-35-c_8: 645025490
+      forza-horizon-4-bugatti-type-35-c_80: 648367185
+      forza-horizon-4-bugatti-type-35-c_81: -201807777
+      forza-horizon-4-bugatti-type-35-c_82: 1447238967
+      forza-horizon-4-bugatti-type-35-c_83: 314248300
+      forza-horizon-4-bugatti-type-35-c_84: -2099999286
+      forza-horizon-4-bugatti-type-35-c_85: -1766280819
+      forza-horizon-4-bugatti-type-35-c_86: -98746015
+      forza-horizon-4-bugatti-type-35-c_87: 1356909072
+      forza-horizon-4-bugatti-type-35-c_88: 182272896
+      forza-horizon-4-bugatti-type-35-c_89: -95646800
+      forza-horizon-4-bugatti-type-35-c_9: 130246577
+      forza-horizon-4-bugatti-type-35-c_90: 241245871
+      forza-horizon-4-bugatti-type-35-c_91: 1243169937
+      forza-horizon-4-bugatti-type-35-c_92: -214607878
+      forza-horizon-4-bugatti-type-35-c_93: -1879406077
+      forza-horizon-4-bugatti-type-35-c_94: -167709968
+      forza-horizon-4-bugatti-type-35-c_95: 1869555315
+      forza-horizon-4-bugatti-type-35-c_96: -136345232
+      forza-horizon-4-bugatti-type-35-c_97: 90281499
+      forza-horizon-4-bugatti-type-35-c_98: 810712822
+      forza-horizon-4-bugatti-type-35-c_99: -219131531
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
