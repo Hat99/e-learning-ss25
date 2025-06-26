@@ -59,6 +59,15 @@ public class Info : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //ensure that the object has an explodARObjectHelper
+        ExplodARObjectHelper helper = gameObject.GetComponent<ExplodARObjectHelper>();
+        if (helper == null)
+        {
+            helper = gameObject.AddComponent<ExplodARObjectHelper>();
+        }
+        //register this script with the helper
+        helper.info = this;
+
         //instantiate the info box
         _infoBox = Instantiate(ExplodARController.instance.infoTemplate);
         _infoBox.transform.SetParent(transform, true);
