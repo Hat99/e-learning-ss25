@@ -76,7 +76,7 @@ public class Info : MonoBehaviour
         //TODO: make this dynamic
         _infoBox.transform.Translate(new Vector3(0, .75f, 0));
         InfoTemplate info = _infoBox.GetComponent<InfoTemplate>();
-
+        _infoBox.SetActive(false);
         info.infoTemplateTitle.text = title;
 
         string text = "";

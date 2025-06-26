@@ -2006,6 +2006,17 @@
                 },
                 {
                     "name": "",
+                    "id": "54176030-0470-46a6-82bf-0815fa842843",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Explode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "83bf55ad-24e6-4306-bc04-bacc4fe2e818",
                     "path": "<XRController>{RightHand}/{SecondaryButton}",
                     "interactions": "",
