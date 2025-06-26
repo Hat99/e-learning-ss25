@@ -346,10 +346,10 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Is Tracked",
+                    "name": "Is Tracked Left",
                     "type": "Button",
                     "id": "82eb6741-beef-48d3-83ab-a957dc1caa1e",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -452,6 +452,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Explode All",
+                    "type": "Button",
+                    "id": "a4cf9c48-0efb-49c5-8130-6df4fce49ed8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -803,7 +812,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Is Tracked",
+                    "action": "Is Tracked Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -814,7 +823,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Is Tracked",
+                    "action": "Is Tracked Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -859,6 +868,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Thumbstick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "284b1f96-5484-4b9d-a72b-12d1eeaa438f",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>{LeftHand}/primarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Explode All",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1439,7 +1459,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Is Tracked",
+                    "name": "Is Tracked Right",
                     "type": "Button",
                     "id": "a705ffe4-b2c8-4b78-847f-25257d4e30af",
                     "expectedControlType": "",
@@ -1914,7 +1934,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Is Tracked",
+                    "action": "Is Tracked Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1925,7 +1945,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Is Tracked",
+                    "action": "Is Tracked Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1987,7 +2007,7 @@
                 {
                     "name": "",
                     "id": "83bf55ad-24e6-4306-bc04-bacc4fe2e818",
-                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>{RightHand}/secondarybutton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
