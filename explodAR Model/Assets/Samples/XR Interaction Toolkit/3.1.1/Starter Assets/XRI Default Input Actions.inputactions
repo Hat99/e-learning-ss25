@@ -355,7 +355,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Tracking State",
+                    "name": "Tracking State Left",
                     "type": "Value",
                     "id": "d20fc51c-7916-43a7-8b03-706049966aea",
                     "expectedControlType": "Integer",
@@ -570,7 +570,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Tracking State",
+                    "action": "Tracking State Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -581,7 +581,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Tracking State",
+                    "action": "Tracking State Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -874,7 +874,7 @@
                 {
                     "name": "",
                     "id": "284b1f96-5484-4b9d-a72b-12d1eeaa438f",
-                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>{LeftHand}/primarybutton",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1468,7 +1468,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Tracking State",
+                    "name": "Tracking State Right",
                     "type": "Value",
                     "id": "167ea203-5bfb-4d74-bde9-8026b7483102",
                     "expectedControlType": "Integer",
@@ -1692,7 +1692,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Tracking State",
+                    "action": "Tracking State Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1703,7 +1703,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Tracking State",
+                    "action": "Tracking State Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -2007,7 +2007,7 @@
                 {
                     "name": "",
                     "id": "83bf55ad-24e6-4306-bc04-bacc4fe2e818",
-                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>{RightHand}/secondarybutton",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
