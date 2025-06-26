@@ -160,6 +160,7 @@ public class Info : MonoBehaviour
     private void SetInfoBoxRotationToView()
     {
         Quaternion rotation = Camera.main.transform.rotation;
+        rotation.x = 0;
         rotation.z = 0;
         _infoBox.transform.rotation = rotation;
     }
