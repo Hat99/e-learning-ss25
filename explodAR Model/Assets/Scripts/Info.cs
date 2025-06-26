@@ -159,7 +159,9 @@ public class Info : MonoBehaviour
     //aligns the info box to face the camera
     private void SetInfoBoxRotationToView()
     {
-        _infoBox.transform.rotation = Camera.main.transform.rotation;
+        Quaternion rotation = Camera.main.transform.rotation;
+        rotation.z = 0;
+        _infoBox.transform.rotation = rotation;
     }
 
     #endregion methods
