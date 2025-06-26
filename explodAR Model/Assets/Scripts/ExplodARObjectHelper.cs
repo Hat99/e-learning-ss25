@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class ExplodARObjectHelper : MonoBehaviour
@@ -27,6 +28,7 @@ public class ExplodARObjectHelper : MonoBehaviour
         //add XR simple interactible script
         XRSimpleInteractable simpleInteractable = gameObject.AddComponent<XRSimpleInteractable>();
         simpleInteractable.firstHoverEntered.AddListener(delegate { SetOutlineEnabled(true); });
+        simpleInteractable.firstHoverEntered.AddListener(OnHoverEntered);
         simpleInteractable.lastHoverExited.AddListener(delegate { SetOutlineEnabled(false); });
     }
 
@@ -54,5 +56,10 @@ public class ExplodARObjectHelper : MonoBehaviour
         bool hasInfo = info != null;
         bool canExplode = explodable != null && explodable.CanExplode();
         _outline.enabled = value && (hasInfo || canExplode);
+    }
+
+    public void OnHoverEntered(HoverEnterEventArgs args)
+    {
+        Debug.Log($"{args.interactorObject} hovered over {args.interactableObject}", this);
     }
 }
