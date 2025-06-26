@@ -25,6 +25,9 @@ public class ExplodARController : MonoBehaviour
     //parameters for outlines
     public float outlineWidth;
     public Color outlineColor;
+
+    private bool _exploded;
+
     #endregion fields
 
 
@@ -50,6 +53,10 @@ public class ExplodARController : MonoBehaviour
         {
             ImplodeAll();
         }
+        if (XRInputHelper.instance.explodeAllActionPressedThisFrame)
+        {
+            ToggleExplosion();
+        }
     }
 
     #endregion unity methods
@@ -60,12 +67,20 @@ public class ExplodARController : MonoBehaviour
 
     public void ExplodeAll()
     {
-        explodeAllEvent.Invoke(true);
+        _exploded = true;
+        explodeAllEvent.Invoke(_exploded);
     }
 
     public void ImplodeAll()
     {
-        explodeAllEvent.Invoke(false);
+        _exploded = false;
+        explodeAllEvent.Invoke(_exploded);
+    }
+
+    public void ToggleExplosion()
+    {
+        _exploded = !_exploded;
+        explodeAllEvent.Invoke(_exploded);
     }
 
     #endregion event incovations
