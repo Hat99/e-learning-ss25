@@ -100,8 +100,17 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
 
     #endregion unity methods
 
+    #region controller
+    public class GripAction : MonoBehaviour, IButtonAction
+    {
+        public void Execute()
+        {
+            Debug.Log("Grip action executed!");
+            // Your logic here
+        }
+    }
 
-
+    #endregion controller
     #region methods
 
     //explodes the object *if* it can explode right now

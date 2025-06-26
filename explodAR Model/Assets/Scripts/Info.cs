@@ -104,7 +104,17 @@ public class Info : MonoBehaviour
 
     #endregion unity methods
 
+    #region controller
+    public class GripAction : MonoBehaviour, IButtonAction
+    {
+        public void Execute()
+        {
+            Debug.Log("Grip action executed!");
+            // Your logic here
+        }
+    }
 
+    #endregion controller
 
     #region methods
 
