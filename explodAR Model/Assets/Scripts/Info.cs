@@ -79,36 +79,54 @@ public class Info : MonoBehaviour
 
         info.infoTemplateTitle.text = title;
 
-        //fill the info box's scroll view
-        TextMeshProUGUI tmp;
-        foreach (InfoObject obj in informationObjects)
+        string text = "";
+        foreach(InfoObject obj in informationObjects)
         {
-            //set the header if it's used
-            if (obj.header != "")
+            if(obj.header != "")
             {
-                tmp = Instantiate(info.infoTemplateHeader);
-                tmp.text = obj.header;
-                tmp.transform.SetParent(info.infoContainer.transform, false);
-                tmp.gameObject.SetActive(true);
+                text += obj.header + "\n";
             }
-
-            //create the info based on type
-            switch (obj.type)
+            if(obj.text != "")
             {
-                case InfoObject.Type.paragraph:
-                    tmp = Instantiate(info.infoTemplateTextContent);
-                    tmp.text = obj.text;
-                    tmp.transform.SetParent(info.infoContainer.transform, false);
-                    tmp.gameObject.SetActive(true);
-                    break;
-                case InfoObject.Type.media:
-                    //unimplemented!
-                    break;
-                default:
-                    Debug.Log("Unimplemented type");
-                    break;
+                text += obj.text + "\n\n";
             }
         }
+
+        TextMeshProUGUI tmp = Instantiate(info.infoTemplateTextContent);
+        tmp.text = text;
+        tmp.transform.SetParent(info.infoContainer.transform, false);
+        tmp.gameObject.SetActive(true);
+
+        //fill the info box's scroll view
+        //TextMeshProUGUI tmp;
+        //foreach (InfoObject obj in informationObjects)
+        //{
+        //    //set the header if it's used
+        //    if (obj.header != "")
+        //    {
+        //        tmp = Instantiate(info.infoTemplateHeader);
+        //        tmp.text = obj.header;
+        //        tmp.transform.SetParent(info.infoContainer.transform, false);
+        //        tmp.gameObject.SetActive(true);
+        //    }
+
+        //    //create the info based on type
+        //    switch (obj.type)
+        //    {
+        //        case InfoObject.Type.paragraph:
+        //            tmp = Instantiate(info.infoTemplateTextContent);
+        //            tmp.text = obj.text;
+        //            tmp.transform.SetParent(info.infoContainer.transform, false);
+        //            tmp.gameObject.SetActive(true);
+        //            break;
+        //        case InfoObject.Type.media:
+        //            //unimplemented!
+        //            break;
+        //        default:
+        //            Debug.Log("Unimplemented type");
+        //            break;
+        //    }
+        //}
     }
 
     #endregion unity methods
