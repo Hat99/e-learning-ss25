@@ -1547,9 +1547,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "SecondaryButtonAction",
+                    "name": "Explode",
                     "type": "Button",
                     "id": "04ebe441-692d-425d-9013-814d515ea674",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Info",
+                    "type": "Button",
+                    "id": "801589a1-9970-48a6-bd4a-3977711921d6",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1971,7 +1980,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SecondaryButtonAction",
+                    "action": "Explode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83bf55ad-24e6-4306-bc04-bacc4fe2e818",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Info",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.XR.ARSubsystems;
 
 public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -33,6 +34,8 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     //an outline to show explodable objects while hovering over them
     private Outline _outline;
 
+    private Info _info;
+
     #endregion fields
 
 
@@ -42,6 +45,8 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        _info = gameObject.GetComponent<Info>();
+
         //add listener to global explosion event
         ExplodARController.instance.explodeAllEvent.AddListener(ExplosionOverride);
 
@@ -96,21 +101,24 @@ public class Explodable : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
             }
             UpdateExplosion();
         }
+
+        if (_outline.enabled)
+        {
+            if (XRInputHelper.instance.explodeActionPressedThisFrame)
+            {
+                Explode();
+            }
+            if(_info != null && XRInputHelper.instance.infoActionPressedThisFrame)
+            {
+                _info.ToggleInfo();
+            }
+        }
     }
 
     #endregion unity methods
 
-    #region controller
-    public class GripAction : MonoBehaviour, IButtonAction
-    {
-        public void Execute()
-        {
-            Debug.Log("Grip action executed!");
-            // Your logic here
-        }
-    }
 
-    #endregion controller
+
     #region methods
 
     //explodes the object *if* it can explode right now
