@@ -12,7 +12,8 @@ public class MenuToggler : MonoBehaviour
         {
             menu.SetActive(!menu.activeSelf);
             menu.transform.position = player.transform.position;
-            menu.transform.localPosition += Vector3.forward;
+            menu.transform.localPosition += player.transform.forward;
+            menu.transform.rotation = player.transform.rotation;
         }
     }
 }

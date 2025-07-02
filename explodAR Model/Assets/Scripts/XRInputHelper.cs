@@ -17,7 +17,7 @@ public class XRInputHelper : MonoBehaviour
         explodeAction = InputSystem.actions.FindAction("Explode");
         explodeAllAction = InputSystem.actions.FindAction("Explode All");
         infoAction = InputSystem.actions.FindAction("Info");
-        menuAction = InputSystem.actions.FindAction("Menu");
+        menuAction = InputSystem.actions.FindAction("Main Menu");
     }
 
     public bool explodeActionPressedThisFrame
