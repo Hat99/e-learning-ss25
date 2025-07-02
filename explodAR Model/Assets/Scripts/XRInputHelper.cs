@@ -6,6 +6,7 @@ public class XRInputHelper : MonoBehaviour
     InputAction explodeAction;
     InputAction explodeAllAction;
     InputAction infoAction;
+    InputAction menuAction;
 
     public static XRInputHelper instance;
 
@@ -15,7 +16,8 @@ public class XRInputHelper : MonoBehaviour
         instance = this;
         explodeAction = InputSystem.actions.FindAction("Explode");
         explodeAllAction = InputSystem.actions.FindAction("Explode All");
-        infoAction = InputSystem.actions.FindAction ("Info");
+        infoAction = InputSystem.actions.FindAction("Info");
+        menuAction = InputSystem.actions.FindAction("Menu");
     }
 
     public bool explodeActionPressedThisFrame
@@ -39,6 +41,14 @@ public class XRInputHelper : MonoBehaviour
         get
         {
             return explodeAllAction.WasPressedThisFrame();
+        }
+    }
+
+    public bool menuActionPressedThisFrame
+    {
+        get
+        {
+            return menuAction.WasPressedThisFrame();
         }
     }
 }
