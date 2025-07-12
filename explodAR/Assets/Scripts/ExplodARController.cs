@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class ExplodARController : MonoBehaviour
@@ -10,8 +9,6 @@ public class ExplodARController : MonoBehaviour
 
     //event for triggering all explosions
     public UnityEvent<bool> explodeAllEvent = new UnityEvent<bool>();
-    public Explodable pointerToken = null;
-    public List<Explodable> pointerQueue = new List<Explodable>();
 
     [Tooltip("How many seconds explosions take")]
     public float explosionDuration;
@@ -19,14 +16,15 @@ public class ExplodARController : MonoBehaviour
     [Tooltip("The information box template object")]
     public GameObject infoTemplate;
 
-    //make the class available as pseudo-static
-    public static ExplodARController instance;
-
     //parameters for outlines
     public float outlineWidth;
     public Color outlineColor;
 
+    //global explosion state
     private bool _exploded;
+
+    //make the class available as pseudo-static
+    public static ExplodARController instance;
 
     #endregion fields
 
@@ -44,7 +42,7 @@ public class ExplodARController : MonoBehaviour
 
     private void Update()
     {
-        //listen for hotkeys
+        //listen for hotkeys (keyboard only, not really needed anymore)
         if (Keyboard.current[Key.E].wasPressedThisFrame)
         {
             ExplodeAll();
@@ -53,6 +51,8 @@ public class ExplodARController : MonoBehaviour
         {
             ImplodeAll();
         }
+
+        //listen for explode all input
         if (XRInputHelper.instance.explodeAllActionPressedThisFrame)
         {
             ToggleExplosion();
@@ -65,18 +65,21 @@ public class ExplodARController : MonoBehaviour
 
     #region event invocations
 
+    //invoke explode all event
     public void ExplodeAll()
     {
         _exploded = true;
         explodeAllEvent.Invoke(_exploded);
     }
 
+    //invoke implode all event
     public void ImplodeAll()
     {
         _exploded = false;
         explodeAllEvent.Invoke(_exploded);
     }
 
+    //toggle current global explosion state
     public void ToggleExplosion()
     {
         _exploded = !_exploded;

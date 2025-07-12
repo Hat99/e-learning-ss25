@@ -11,6 +11,7 @@ public class Info : MonoBehaviour
     [Serializable]
     public class InfoObject
     {
+        //type of media, only (text) paragraph is currently implemented
         public enum Type
         {
             paragraph,
@@ -23,7 +24,7 @@ public class Info : MonoBehaviour
         [Tooltip("The header of the section")]
         public string header;
 
-        //unimplemented!
+        //not implemented!
         [Tooltip("Wether or not the section is collapsible")]
         public bool collapsible;
 
@@ -44,6 +45,7 @@ public class Info : MonoBehaviour
     [SerializeField]
     public List<InfoObject> informationObjects = new List<InfoObject>();
 
+    [Tooltip("Where the tooltip should spawn relative to it's parent object")]
     public Vector3 infoOffset = new Vector3(0, 0.75f, 0);
 
     //the info box object
@@ -75,12 +77,13 @@ public class Info : MonoBehaviour
         _infoBox.transform.SetParent(transform, true);
         _infoBox.transform.position = transform.position;
 
-        //TODO: make this dynamic
+        //apply offset to infobox
         _infoBox.transform.Translate(infoOffset);
         InfoTemplate info = _infoBox.GetComponent<InfoTemplate>();
         _infoBox.SetActive(false);
         info.infoTemplateTitle.text = title;
 
+        //fill infobox with text
         string text = "";
         foreach(InfoObject obj in informationObjects)
         {
@@ -99,6 +102,7 @@ public class Info : MonoBehaviour
         tmp.transform.SetParent(info.infoContainer.transform, false);
         tmp.gameObject.SetActive(true);
 
+        //UNUSED: fill info box with different text objects
         //fill the info box's scroll view
         //TextMeshProUGUI tmp;
         //foreach (InfoObject obj in informationObjects)
@@ -133,17 +137,7 @@ public class Info : MonoBehaviour
 
     #endregion unity methods
 
-    #region controller
-    public class GripAction : MonoBehaviour, IButtonAction
-    {
-        public void Execute()
-        {
-            Debug.Log("Grip action executed!");
-            // Your logic here
-        }
-    }
 
-    #endregion controller
 
     #region methods
 

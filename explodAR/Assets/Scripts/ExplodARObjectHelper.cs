@@ -1,19 +1,27 @@
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class ExplodARObjectHelper : MonoBehaviour
 {
+    #region fields
+
+    //references to the explodable and info scripts on the same object (if they're used)
     public Explodable explodable;
     public Info info;
+
     //an outline to show explodable objects while hovering over them
     private Outline _outline;
+
+    #endregion fields
+
+
+
+    #region unity methods
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //add an outline to the object
+        //add an outline to the object (using Quick Outline plugin by Chris Nolet)
         _outline = gameObject.AddComponent<Outline>();
         _outline.OutlineMode = Outline.Mode.OutlineAll;
 
@@ -49,11 +57,21 @@ public class ExplodARObjectHelper : MonoBehaviour
         }
     }
 
+    #endregion unity methods
+
+
+
+    #region methods
+
+    //sets status of object outline
     public void SetOutlineEnabled(bool value)
     {
         //enable the outline only if the object can explode or has info to display
+        //(otherwise objects aren't interactable and this script shouldn't even be on them)
         bool hasInfo = info != null;
         bool canExplode = explodable != null && explodable.CanExplode();
         _outline.enabled = value && (hasInfo || canExplode);
     }
+
+    #endregion methods
 }

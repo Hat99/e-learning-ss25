@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
-public class Explodable : MonoBehaviour, IPointerClickHandler//, IPointerEnterHandler, IPointerExitHandler
+public class Explodable : MonoBehaviour
 {
     #region fields
 
@@ -28,8 +26,6 @@ public class Explodable : MonoBehaviour, IPointerClickHandler//, IPointerEnterHa
 
     //automatically filled, which, if any, parts rely on this being exploded
     List<Explodable> explodeBefore = new List<Explodable>();
-
-    
 
     #endregion fields
 
@@ -64,7 +60,7 @@ public class Explodable : MonoBehaviour, IPointerClickHandler//, IPointerEnterHa
             explodable.explodeBefore.Add(this);
         }
 
-        //TODO ?: add circular dependency check for explodeBefore / explodeAfter
+        //TODO ?: add circular dependency check for explodeBefore / explodeAfter?
 
         
     }
@@ -96,8 +92,6 @@ public class Explodable : MonoBehaviour, IPointerClickHandler//, IPointerEnterHa
             }
             UpdateExplosion();
         }
-
-        
     }
 
     #endregion unity methods
@@ -155,73 +149,6 @@ public class Explodable : MonoBehaviour, IPointerClickHandler//, IPointerEnterHa
         transform.localPosition = Vector3.Lerp
             (_explosionStart, _explosionTarget, _explosionProgress / ExplodARController.instance.explosionDuration);
     }
-    
-    
 
     #endregion methods
-
-
-
-    #region pointer handlers
-
-    //make object clickable to trigger explosions and info pop ups
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if ((Keyboard.current[Key.LeftCtrl].isPressed))
-        {
-            Info info = gameObject.GetComponent<Info>();
-            if (info != null)
-            {
-                info.ToggleInfo();
-            }
-        }
-        else
-        {
-            ToggleExplosion();
-        }
-        
-    }
-
-    //public void OnPointerEnter(PointerEventData eventData)
-    //{   
-    //    if (eventData.pointerEnter == gameObject)
-    //    {
-    //        if(ExplodARController.instance.pointerToken != null)
-    //        {
-    //            ExplodARController.instance.pointerQueue.Add(ExplodARController.instance.pointerToken);
-    //            ExplodARController.instance.pointerToken.SetOutlineEnabled(false);
-    //        }
-    //        ExplodARController.instance.pointerToken = this;
-            
-    //        SetOutlineEnabled(true);
-    //    }
-    //    else
-    //    {
-    //        ExplodARController.instance.pointerQueue.Add(this);
-    //    }
-    //}
-
-    
-
-    //public void OnPointerExit(PointerEventData eventData)
-    //{
-    //    SetOutlineEnabled(false);
-    //    ExplodARController.instance.pointerQueue.Remove(this);
-    //    if(ExplodARController.instance.pointerToken == this)
-    //    {
-    //        if(ExplodARController.instance.pointerQueue.Count > 0)
-    //        {
-    //            Explodable exp = ExplodARController.instance.pointerQueue[0];
-    //            ExplodARController.instance.pointerQueue.Remove(exp);
-    //            exp.SetOutlineEnabled(true);
-    //            ExplodARController.instance.pointerToken = exp;
-    //        }
-    //        else
-    //        {
-    //            ExplodARController.instance.pointerToken = null;
-    //        }
-    //    }
-    //}
-
-    #endregion pointer handlers
 }
