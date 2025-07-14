@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -6,9 +5,13 @@ using UnityEngine;
 
 public class Info : MonoBehaviour
 {
+    #region infoObject
+
+    //data definition for a block of information to be displayed in the info box
     [Serializable]
     public class InfoObject
     {
+        //type of media, only (text) paragraph is currently implemented
         public enum Type
         {
             paragraph,
@@ -21,15 +24,19 @@ public class Info : MonoBehaviour
         [Tooltip("The header of the section")]
         public string header;
 
+        //not implemented!
         [Tooltip("Wether or not the section is collapsible")]
         public bool collapsible;
 
         [Tooltip("The information text or media source")]
         public string text;
-
-        private TextMeshProUGUI _headerText;
-        private TextMeshProUGUI _contentText;
     }
+
+    #endregion infoObject
+
+
+
+    #region fields
 
     [Tooltip("The title of the info box")]
     public string title;
@@ -38,24 +45,121 @@ public class Info : MonoBehaviour
     [SerializeField]
     public List<InfoObject> informationObjects = new List<InfoObject>();
 
+    [Tooltip("Where the tooltip should spawn relative to it's parent object")]
+    public Vector3 infoOffset = new Vector3(0, 0.75f, 0);
+
+    //the info box object
     private GameObject _infoBox;
-    private TextMeshProUGUI _titleText;
+
+    //wether or not the info box is currently active
+    private bool _infoShown = false;
+
+    #endregion fields
+
+
+
+    #region unity methods
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _infoBox = Instantiate(InfoTemplate.instance.infoTemplate);
+        //ensure that the object has an explodARObjectHelper
+        ExplodARObjectHelper helper = gameObject.GetComponent<ExplodARObjectHelper>();
+        if (helper == null)
+        {
+            helper = gameObject.AddComponent<ExplodARObjectHelper>();
+        }
+        //register this script with the helper
+        helper.info = this;
+
+        //instantiate the info box
+        _infoBox = Instantiate(ExplodARController.instance.infoTemplate);
+        _infoBox.transform.SetParent(transform, true);
+        _infoBox.transform.position = transform.position;
+
+        //apply offset to infobox
+        _infoBox.transform.Translate(infoOffset);
         InfoTemplate info = _infoBox.GetComponent<InfoTemplate>();
+        _infoBox.SetActive(false);
+        info.infoTemplateTitle.text = title;
 
-        //_titleText = Instantiate(ExplodARController.instance.infoTemplateTitle);
-        _titleText.text = title;
+        //fill infobox with text
+        string text = "";
+        foreach(InfoObject obj in informationObjects)
+        {
+            if(obj.header != "")
+            {
+                text += obj.header + "\n";
+            }
+            if(obj.text != "")
+            {
+                text += obj.text + "\n\n";
+            }
+        }
 
-        _infoBox.SetActive(true);
+        TextMeshProUGUI tmp = Instantiate(info.infoTemplateTextContent);
+        tmp.text = text;
+        tmp.transform.SetParent(info.infoContainer.transform, false);
+        tmp.gameObject.SetActive(true);
+
+        //UNUSED: fill info box with different text objects
+        //fill the info box's scroll view
+        //TextMeshProUGUI tmp;
+        //foreach (InfoObject obj in informationObjects)
+        //{
+        //    //set the header if it's used
+        //    if (obj.header != "")
+        //    {
+        //        tmp = Instantiate(info.infoTemplateHeader);
+        //        tmp.text = obj.header;
+        //        tmp.transform.SetParent(info.infoContainer.transform, false);
+        //        tmp.gameObject.SetActive(true);
+        //    }
+
+        //    //create the info based on type
+        //    switch (obj.type)
+        //    {
+        //        case InfoObject.Type.paragraph:
+        //            tmp = Instantiate(info.infoTemplateTextContent);
+        //            tmp.text = obj.text;
+        //            tmp.transform.SetParent(info.infoContainer.transform, false);
+        //            tmp.gameObject.SetActive(true);
+        //            break;
+        //        case InfoObject.Type.media:
+        //            //unimplemented!
+        //            break;
+        //        default:
+        //            Debug.Log("Unimplemented type");
+        //            break;
+        //    }
+        //}
     }
 
-    // Update is called once per frame
-    void Update()
+    #endregion unity methods
+
+
+
+    #region methods
+
+    //toggles the info box active or inactive
+    public void ToggleInfo()
+    {   
+        _infoShown = !_infoShown;
+        if (_infoShown)
+        {
+            SetInfoBoxRotationToView();
+        }
+        _infoBox.SetActive(_infoShown);
+    }
+
+    //aligns the info box to face the camera
+    private void SetInfoBoxRotationToView()
     {
-        
+        Quaternion rotation = Camera.main.transform.rotation;
+        rotation.x = 0;
+        rotation.z = 0;
+        _infoBox.transform.rotation = rotation;
     }
+
+    #endregion methods
 }

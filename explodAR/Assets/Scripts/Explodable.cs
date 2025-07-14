@@ -1,41 +1,58 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class Explodable : MonoBehaviour
 {
+    #region fields
+
     [Tooltip("How far and in what direction to move the object when exploding")]
     public Vector3 explosionDirection;
 
     //where to start and end the explosion (calculated in start function)
-    private Vector3 explosionStart;
-    private Vector3 explosionTarget;
+    private Vector3 _explosionStart;
+    private Vector3 _explosionTarget;
 
     //how far the explosion has progressed
-    private float explosionProgress;
+    private float _explosionProgress;
 
     [Tooltip("Is the target object currently exploded?")]
     public bool exploded;
 
     //is the object currently supposed to be exploding / exploded?
-    private bool exploding;
+    private bool _exploding;
 
     [Tooltip("Which, if any, parts have to be exploded prior to exploding this")]
     public List<Explodable> explodeAfter = new List<Explodable>();
 
     //automatically filled, which, if any, parts rely on this being exploded
-    //TODO: make this non-public?
-    public List<Explodable> explodeBefore = new List<Explodable>();
+    List<Explodable> explodeBefore = new List<Explodable>();
 
-    private GameObject _button;
-    private LineRenderer _lineRenderer;
+    #endregion fields
+
+
+
+    #region unity methods
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        explosionStart = transform.localPosition;
-        explosionTarget = transform.localPosition + explosionDirection;
+        //ensure that the object has an explodARObjectHelper
+        ExplodARObjectHelper helper = gameObject.GetComponent<ExplodARObjectHelper>();
+        if (helper == null)
+        {
+            helper = gameObject.AddComponent<ExplodARObjectHelper>();
+        }
+        //register this script with the helper
+        helper.explodable = this;
+
+        //add listener to global explosion event
+        ExplodARController.instance.explodeAllEvent.AddListener(ExplosionOverride);
+
+        
+
+        //set explosion start and target for lerping
+        _explosionStart = transform.localPosition;
+        _explosionTarget = transform.localPosition + explosionDirection;
 
         //register this object as dependent on any in explodeAfter
         foreach (Explodable explodable in explodeAfter)
@@ -43,69 +60,66 @@ public class Explodable : MonoBehaviour
             explodable.explodeBefore.Add(this);
         }
 
-        //TODO ?: add circular dependency check for explodeBefore / explodeAfter
+        //TODO ?: add circular dependency check for explodeBefore / explodeAfter?
 
-        _button = Instantiate(ExplodARController.instance.explodeButtonTemplate);
-        _button.transform.SetParent(this.transform);
-        _button.transform.position = transform.position 
-            + explosionDirection.normalized * ExplodARController.instance.buttonDistanceFromObject;
         
-        _lineRenderer = _button.AddComponent<LineRenderer>();
-        _lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        _lineRenderer.startColor = Color.white;
-        _lineRenderer.endColor = Color.white;
-        _lineRenderer.startWidth = .1f;
-        _lineRenderer.endWidth = .1f;
-        _lineRenderer.positionCount = 2;
-        _lineRenderer.SetPosition(0, transform.position);
-        _lineRenderer.SetPosition(1, _button.transform.position); 
-
-        SetButtonActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current[Key.E].wasPressedThisFrame)
+        //update explosion progress if the object is currently exploding   
+        if(_exploding && _explosionProgress < ExplodARController.instance.explosionDuration)
         {
-            Explode();
-        }
-
-        if(exploding && explosionProgress < ExplodARController.instance.explosionDuration)
-        {
-            explosionProgress += Time.deltaTime;
-            if(explosionProgress > ExplodARController.instance.explosionDuration)
+            _explosionProgress += Time.deltaTime;
+            if(_explosionProgress > ExplodARController.instance.explosionDuration)
             {
-                explosionProgress = ExplodARController.instance.explosionDuration;
+                //fix the progress value
+                _explosionProgress = ExplodARController.instance.explosionDuration;
                 exploded = true;
             }
             UpdateExplosion();
         }
-        else if (!exploding && explosionProgress > 0)
+        //update explosion progress if the object is currently imploding
+        else if (!_exploding && _explosionProgress > 0)
         {
-            explosionProgress -= Time.deltaTime;
-            if(explosionProgress < 0)
+            _explosionProgress -= Time.deltaTime;
+            if(_explosionProgress < 0)
             {
-                explosionProgress = 0;
+                //fix the progress value
+                _explosionProgress = 0;
                 exploded = false;
             }
             UpdateExplosion();
         }
-
     }
 
+    #endregion unity methods
 
-    public void Explode()
+
+
+    #region methods
+
+    //explodes the object *if* it can explode right now
+    public void ToggleExplosion()
     {
+        //if the object can explode (or implode), do it
         if(CanExplode())
         {
-            exploding = !exploding;
+            _exploding = !_exploding;
             UpdateExplosion();
         }
     }
 
+    //explodes the object *no matter if* it can explode right now
+    public void ExplosionOverride(bool value)
+    {
+        _exploding = value;
+        UpdateExplosion();
+    }
 
-    private bool CanExplode()
+    //wether or not the object can currently explode
+    public bool CanExplode()
     {
         //is there an explodeAfter object that's not yet exploded?
         foreach(Explodable explodable in explodeAfter)
@@ -129,16 +143,12 @@ public class Explodable : MonoBehaviour
         return true;
     }
 
+    //updates the object's current position to match its explosion progress
     private void UpdateExplosion()
     {
         transform.localPosition = Vector3.Lerp
-            (explosionStart, explosionTarget, explosionProgress / ExplodARController.instance.explosionDuration);
-        _lineRenderer.SetPosition(0, this.transform.position);
-        _lineRenderer.SetPosition(1, _button.transform.position);
+            (_explosionStart, _explosionTarget, _explosionProgress / ExplodARController.instance.explosionDuration);
     }
 
-    public void SetButtonActive(bool active)
-    {
-        _button.SetActive(active);
-    }
+    #endregion methods
 }
